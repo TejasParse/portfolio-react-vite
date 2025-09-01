@@ -4,15 +4,19 @@ import cubing_image from "./cubing.png";
 import linkedin_image from "./linkedin.png";
 import profile_image from "./profile.jpg";
 
-const Navbar = (props)=>{
+const Navbar = ({
+    activeSection,
+    scrollToSection,
+})=>{
 
     const location1 = useLocation();
-
-    console.log(location1.pathname);
 
     const selectedClass = "block my-1 py-2 mx-12 text-white border-double border-b-2 font-bold";
     const notSelectedClass =
       "block my-1 py-2 mx-12 text-gray-300 rounded hover:text-white";
+
+    console.log(activeSection);
+
 
     return (
         <div className="text-xl">
@@ -26,31 +30,62 @@ const Navbar = (props)=>{
                     
                 </div>
 
-                <Link to={"/"} className={`${location1.pathname === "/" ? selectedClass : notSelectedClass}`} style={{textDecoration:"none"}}>
+                <div
+                    className={`${activeSection === "AboutMe" ? selectedClass : notSelectedClass} cursor-pointer`}
+                    style={{textDecoration:"none"}}
+                    onClick={() => scrollToSection("AboutMe")}
+                >
                     About Me
-                </Link>
-                <Link to={"/Education"} className={`${location1.pathname === "/Education" ? selectedClass : notSelectedClass}`} style={{textDecoration:"none"}}>
+                </div>
+                <div
+                    className={`${activeSection === "Education" ? selectedClass : notSelectedClass} cursor-pointer`}
+                    style={{textDecoration:"none"}}
+                    onClick={() => scrollToSection("Education")}
+                >
                     Education
-                </Link>
-                <Link to={"/Experience"} className={`${location1.pathname === "/Experience" ? selectedClass : notSelectedClass}`} style={{textDecoration:"none"}}>
+                </div>
+                <div
+                    className={`${activeSection === "Experience" ? selectedClass : notSelectedClass} cursor-pointer`}
+                    style={{textDecoration:"none"}}
+                    onClick={() => scrollToSection("Experience")}
+                >
                     Experience
-                </Link>
-                <Link to={"/Projects"} className={`${location1.pathname === "/Projects" ? selectedClass : notSelectedClass}`} style={{textDecoration:"none"}}>
+                </div>
+                <div
+                    className={`${activeSection === "Projects" ? selectedClass : notSelectedClass} cursor-pointer`}
+                    style={{textDecoration:"none"}}
+                    onClick={() => scrollToSection("Projects")}
+                >
                     My Projects
-                </Link>
-                <Link to={"/Skills"} className={`${location1.pathname === "/Skills" ? selectedClass : notSelectedClass}`} style={{textDecoration:"none"}}>
+                </div>
+                <div
+                    className={`${activeSection === "Skills" ? selectedClass : notSelectedClass} cursor-pointer`}
+                    style={{textDecoration:"none"}}
+                    onClick={() => scrollToSection("Skills")}
+                >
                     Skills & Achievements
-                </Link>
-                <Link to={"/Leadership"} className={`${location1.pathname === "/Leadership" ? selectedClass : notSelectedClass}`} style={{textDecoration:"none"}}>
+                </div>
+                <div
+                    className={`${activeSection === "Leadership" ? selectedClass : notSelectedClass} cursor-pointer`}
+                    style={{textDecoration:"none"}}
+                    onClick={() => scrollToSection("Leadership")}
+                >
                     Leadership Positions
-                </Link>
-                
-                <Link to={"/Resume"} className={`${location1.pathname === "/Resume" ? selectedClass : notSelectedClass}`} style={{textDecoration:"none"}}>
-                    Resume
-                </Link>
-                <Link to={"/SpeedCubing"} className={`${location1.pathname === "/SpeedCubing" ? selectedClass : notSelectedClass}`} style={{textDecoration:"none"}}>
+                </div>
+                <div
+                    className={`${activeSection === "SpeedCubing" ? selectedClass : notSelectedClass} cursor-pointer`}
+                    style={{textDecoration:"none"}}
+                    onClick={() => scrollToSection("SpeedCubing")}
+                >
                     Speed Cubing
-                </Link>
+                </div>
+                <div
+                    className={`${activeSection === "Resume" ? selectedClass : notSelectedClass} cursor-pointer`}
+                    style={{textDecoration:"none"}}
+                    onClick={() => scrollToSection("Resume")}
+                >
+                    Resume
+                </div>
 
             </ul>
         </div>

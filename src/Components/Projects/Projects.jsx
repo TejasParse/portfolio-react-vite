@@ -16,7 +16,7 @@ function MyVerticallyCenteredModal(props) {
   // console.log(props.projectType, props.indexProject, ProjectsData, "Kya hua?");
 
   let projectInformation = ProjectsData[props.projectType][props.indexProject];
-  console.log(projectInformation);
+  // console.log(projectInformation);
 
   if(!projectInformation) {
     projectInformation = ProjectsData["Web"][0];
@@ -88,7 +88,7 @@ const Projects = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   
   let getType = searchParams.get("q");
-  console.log(getType, "Will it work now");
+  // console.log(getType, "Will it work now");
 
   if(!(getType=="Javascript" || getType=="Python" || getType=="App") || getType==null) {
     getType="Javascript";

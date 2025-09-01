@@ -12,7 +12,7 @@ const Experience = () => {
       <div className="border-x-4 border-x-brown-bg border-b-4 border-b-brown-bg px-2 pb-3 mb-6">
         <h1 className="text-xl md:text-3xl font-bold text-light-brown-bg">Experience</h1>
       </div>
-      <div className='overflow-scroll'>
+      <div className=''>
         <div className="border-x-4 border-x-brown-bg border-b-4 border-b-brown-bg px-2 mb-6">
           <div className="md:flex flex-row justify-between border-b-2 text-light-brown-bg pb-2">
             <div className="flex flex-row justify-start gap-2 items-center">
