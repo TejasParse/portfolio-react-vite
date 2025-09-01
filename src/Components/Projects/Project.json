@@ -1,0 +1,311 @@
+{
+    "Javascript": [
+        {
+            "title": "Distributed Cloud Image Recognition with Manual Autoscaler",
+            "links": [
+                {
+                    "url": "https://github.com/TejasParse/cloud-project-autoscaler/tree/master",
+                    "text": "Github",
+                    "bg_color": "slate-700"
+                }
+            ],
+            "images": [
+                {"url":"/web/autoscaler/architecture.png", "caption": "Architecture of the Project"}
+            ],
+            "thumbnail": "/web/autoscaler.png",
+            "techUsed": [
+                {"url":"/tech/py_icon.png", "caption": "Python - Used for auto-scaler and image processing"},
+                {"url":"/tech/fastapi.png", "caption": "FastAPI - Used for backend"},
+                {"url":"/tech/aws.png", "caption": "AWS - Cloud Provider used to host the API"}
+            ],
+            "description": [
+                "Built a distributed image processing system using AWS S3, SQS, and EC2, enabling scalable and efficient task execution.",
+                "Developed a FastAPI server to handle asynchronous uploads, queue requests, and manage responses, reducing processing latency.",
+                "Implemented an EC2 auto-scaler to dynamically start/stop instances based on demand, optimizing cost and resource utilization.",
+                "Please go through the Github Readme for detailed explanation and project setup"
+            ],
+            "gridSize": "2",
+            "visible": true
+        },
+        {
+            "visible": true,
+            "title": "Pet Sanctum - Pet Adoption and Listing!",
+            "links": [
+                {
+                    "url": "https://stellular-lamington-287e44.netlify.app/",
+                    "text": "Try it",
+                    "bg_color": "blue-600"
+                },
+                {
+                    "url": "https://www.youtube.com/watch?v=9iGJ7-JORNw",
+                    "text": "Demo",
+                    "bg_color": "red-600"
+                },
+                {
+                    "url": "https://github.com/TejasParse/pet-sanctum-react",
+                    "text": "Github",
+                    "bg_color": "slate-700"
+                }
+
+            ],
+            "images": [
+                {"url":"/web/petsanctum/adminpage.png", "caption": "Admin Panel with Global Information"},
+                {"url":"/web/petsanctum/adoptpage.png", "caption": "Pet Listing Page"},
+                {"url":"/web/petsanctum/blogspage.png", "caption": "Blogs Page"},
+                {"url":"/web/petsanctum/petpage.png", "caption": "Pet Profile Page"},
+                {"url":"/web/petsanctum/profilepage.png", "caption": "Profile Page"},
+                {"url":"/web/petsanctum/uploadpage.png", "caption": "Upload Pet Page"}
+            ],
+            "techUsed": [
+                {"url":"/tech/react.png", "caption": "ReactJs - Used for Frontend"},
+                {"url":"/tech/node.png", "caption": "NodeJs - Used for Backend"},
+                {"url":"/tech/mongodb.png", "caption": "MongoDB - Used for Database"},
+                {"url":"/tech/redis.jpg", "caption": "Redis - Used for Caching"}
+            ],
+            "thumbnail": "/web/petsanctum.png",
+            "description": [
+                "A web application where one can find animals to adopt and simultaneously upload their pets and apply for the rescue of stray animals through the application.", 
+                "Developed 100% RESTful API using Express.JS with MongoDB as a persistence layer while utilizing ReactJS on the front end. It follows the MVC Model and uses Redis for Caching which also is CICD pipelined."
+            ],
+            "gridSize": "2"
+        },
+        {
+            "visible": true,
+            "title": "UNO Multiplayer - A Socket Symphony",
+            "links": [
+                {
+                    "url": "https://visionary-bavarois-a68d02.netlify.app/",
+                    "text": "Try it",
+                    "bg_color": "blue-600"
+                },
+                {
+                    "url": "https://github.com/TejasParse/uno-frontend/tree/backend-heavy",
+                    "text": "Frontend",
+                    "bg_color": "slate-700"
+                },
+                {
+                    "url": "https://github.com/TejasParse/uno-frontend/tree/backend-heavy",
+                    "text": "Backend",
+                    "bg_color": "slate-700"
+                }
+
+            ],
+            "images": [
+                {"url":"/web/uno/homepage.png", "caption": "Homepage"},
+                {"url":"/web/uno/game.png", "caption": "Gameplay Snapshot"}
+            ],
+            "techUsed": [
+                {"url":"/tech/react.png", "caption": "ReactJs - Used for Frontend"},
+                {"url":"/tech/node.png", "caption": "NodeJs - Used for Backend"},
+                {"url":"/tech/socket.png", "caption": "Socket - Used for Client-Server Interaction"}
+            ],
+            "thumbnail": "/web/uno1.png",
+            "description": [
+                "Developed a real-time UNO multiplayer game using React.js and Node.js with Express.js with an integrated chat room feature for enhanced user interaction.",
+                "Implemented a robust socket connection system to synchronize game data among multiple players in real-time, overcoming challenges to ensure smooth gameplay.",
+                "Enhanced user interaction with integrated chatbox functionality and a visually appealing user interface crafted using Tailwind CSS and Framer Motion."
+            ],
+            "gridSize": "2"
+        },
+        {
+            "title": "Farmers Producer Organization(FPO) Portal (SIH'23 &#127942;)!",
+            "links": [
+                {
+                    "url": "https://git-clone-frontend.vercel.app/",
+                    "text": "Try it",
+                    "bg_color": "blue-600"
+                },
+                {
+                    "url": "https://github.com/TejasParse/git-clone-backend-sih",
+                    "text": "Backend",
+                    "bg_color": "slate-700"
+                },
+                {
+                    "url": "https://github.com/TejasParse/git-clone-frontend-sih",
+                    "text": "Frontend",
+                    "bg_color": "slate-700"
+                }
+
+            ],
+            "images": [
+                {"url":"/web/fpoportal/adminpage.png", "caption": "Admin Panel for Govt Officer"},
+                {"url":"/web/fpoportal/homepage.png", "caption": "Homepage"},
+                {"url":"/web/fpoportal/servicepage.png", "caption": "Service Listing Page"},
+                {"url":"/web/fpoportal/userpage.png", "caption": "Dashboard for User Investments"},
+                {"url":"/web/fpoportal/wdcPage.png", "caption": "WDC Page"}
+            ],
+            "thumbnail": "/web/fpoportal.png",
+            "techUsed": [
+                {"url":"/tech/react.png", "caption": "ReactJs - Used for Frontend"},
+                {"url":"/tech/node.png", "caption": "NodeJs - Used for Backend"},
+                {"url":"/tech/dialog.jpeg", "caption": "Dialogflow - Used for Chatbot"},
+                {"url":"/tech/mongodb.png", "caption": "MongoDB - Used for Database"}
+            ],
+            "description": ["Winning Project of Smart India Hackathon 2023", "Contributed to the Winning Team at Smart India Hackathon 2023, actively involved in developing an analytical portal for comparison of FPOs, coupled with a marketplace for income diversification","Implemented a Smart Voice-based Multilingual NLP Chatbot using ReactJs (Frontend) and Nodejs (Backend), alongside Dialogflow for Text Chatbot, and MongoDB for efficient data management"],
+            "gridSize": "2",
+            "visible": false
+        }
+    ],
+    "Python": [
+        {
+            "visible": true,
+            "title": "Enhanced Video Classification and Retrieval System",
+            "links": [
+                {
+                    "url": "https://github.com/TejasParse/multimedia-retrieval/tree/master",
+                    "text": "Github",
+                    "bg_color": "slate-700"
+                }
+            ],
+            "images": [
+                {"url":"/ml/multimedia/multimedia.png", "caption": "A snapshot from the detailed report showcasing reterival"}
+            ],
+            "thumbnail": "/ml/multimedia.png",
+            "techUsed": [
+                {"url":"/tech/py_icon.png", "caption": "Python - Language to implement classification and Clustering Algorithms"},
+                {"url":"/tech/pytorch.png", "caption": "PyTorch - Used for ML Model"}
+            ],
+            "description": ["Built a video search and classification system using HMDB51, primarily with Python and PyTorch, creating various features from videos and integrating feature extraction, dimensionality reduction, and retrieval mechanisms.", "Implemented classifiers (K-NN, SVM) and a relevance feedback system to improve classification and user-driven search.", "Optimized retrieval with Locality-Sensitive Hashing (LSH) and clustering for efficient similarity search and label analysis."],
+            "gridSize": 1
+        },
+        {
+            "visible": true,
+            "title": "Benchmarking LLMs & Creating Auto-Evaluator Agent",
+            "links": [
+                {
+                    "url": "https://drive.google.com/file/d/1nX9JLAeOJw6r0ApDnVk91uGNOcCNQRwH/view?usp=sharing",
+                    "text": "Report",
+                    "bg_color": "slate-700"
+                }
+            ],
+            "images": [],
+            "thumbnail": "/ml/benchmark.png",
+            "techUsed": [
+                {"url":"/tech/py_icon.png", "caption": "Python - Language to automate evaluation of LLMs on datasets"},
+                {"url":"/tech/gpt.png", "caption": "ChatGPT - Utilized for benchmarking datasets and developing auto-evaluator agent"},
+                {"url":"/tech/meta.png", "caption": "LLAMA - Utilized for benchmarking datasets"}
+            ],
+            "description": [
+                "Evaluated and compared logical reasoning performance of LLaMA  and ChatGPT using benchmark datasets like LogiQA and ARCT.",
+                "Developed an error taxonomy to categorize reasoning failures, providing insights for improving reasoning chains in LLMs.",
+                "Created an auto-evaluator LLM agent, achieving 81.98% accuracy in categorizing reasoning errors based on the defined taxonomy.",
+                "Please go through the report for detailed information"
+            ],
+            "gridSize": 1
+        },
+        {
+            "visible": true,
+            "title": "Analysis of Driver Behavior on Restaurant Discounts",
+            "links": [
+                {
+                    "url": "https://github.com/TejasParse/driver-behaviour-analysis/blob/master/S20200010209_IndustryReport.pdf",
+                    "text": "Report",
+                    "bg_color": "blue-600"
+                },
+                {
+                    "url": "https://github.com/TejasParse/driver-behaviour-analysis",
+                    "text": "Github",
+                    "bg_color": "slate-700"
+                }
+
+            ],
+            "images": [],
+            "thumbnail": "/ml/driver_analysis.png",
+            "techUsed": [
+                {"url":"/tech/py_icon.png", "caption": "Python - Used as programming language"},
+                {"url":"/tech/pandas.svg", "caption": "Pandas - Used for handling datasets"},
+                {"url":"/tech/scikit.png", "caption": "Scikit - Used for ML Models"}
+            ],
+            "description": [
+                "Trained 15 predictive models using Python, Pandas, NumPy, and scikit-learn to analyze offer acceptance behavior. ",
+                "Conducted EDA to identify key features and trained classifiers, optimizing model performance across 27 features.",
+                "Gained insights into predictive modeling, evaluating top 7 classifiers to understand decision-making in real scenarios.",
+                "Please go through the report for detailed anaylsis"
+            ],
+            "gridSize": 1
+        },
+        {
+            "visible": false,
+            "title": "Devanagari Handwritten Digits Recognition<br>",
+            "links": [
+                {
+                    "url": "https://shimmering-frangipane-5bd0d2.netlify.app/",
+                    "text": "Website",
+                    "bg_color": "blue-600"
+                },
+                {
+                    "url": "https://github.com/TejasParse/devanagari-recognition-client",
+                    "text": "Github",
+                    "bg_color": "slate-700"
+                }
+
+            ],
+            "images": [
+                {"url":"/ml/devanagari/homepage.png", "caption": "Webpage utilizing the Model"}
+            ],
+            "thumbnail": "/ml/devanagari.png",
+            "techUsed": [
+                {"url":"/tech/react.png", "caption": "ReactJs - Used for Frontend"},
+                {"url":"/tech/fastapi.png", "caption": "FastAPI - Used for Backend"},
+                {"url":"/tech/pytorch.png", "caption": "PyTorch - Used for ML Model"}
+            ],
+            "description": ["Trained several locally accelerated GPU CNN models.", "These models were boosted by a robust technique that utilized the features of a Multilingual OCR dataset that achieved 99.70% testing accuracy."],
+            "gridSize": 1
+        },
+        {
+            "visible": false,
+            "title": "ShakespeareGPT<br>",
+            "links": [
+                {
+                    "url": "https://github.com/TejasParse/language-model",
+                    "text": "Github",
+                    "bg_color": "slate-700"
+                }
+            ],
+            "images": [
+                {"url":"/ml/languageModel/languageModel.png", "caption": "Trained Language Model Generating Tokens"}
+            ],
+            "techUsed": [
+                {"url":"/tech/pytorch.png", "caption": "PyTorch - Used for ML Model"}
+            ],
+            "thumbnail": "/ml/languageModel.png",
+            "description": [
+                "Created a bigram language model and trained it using the written works of author William Shakespeare", 
+                "Created a generative pretrained transformer to generate tokens that mimics Shakespeare’s writing."
+            ],
+            "gridSize": 1,
+            "youtubeLink": ""
+        },
+        {
+            "visible": false,
+            "title": "Pong DQN RL Agent",
+            "links": [
+                {
+                    "url": "https://youtu.be/HR3dgTOkfIU",
+                    "text": "Demo",
+                    "bg_color": "red-600"
+                },
+                {
+                    "url": "https://github.com/TejasParse/pong-rl-agent",
+                    "text": "Github",
+                    "bg_color": "slate-700"
+                }
+            ],
+            "images": [
+                {"url":"/ml/pong/homepage.png", "caption": "Trained Model competing with Computer"}
+            ],
+            "techUsed": [
+                {"url":"/tech/gym.jpg", "caption": "OpenAI Gym - Used for RL Environment"},
+                {"url":"/tech/tensorflow.png", "caption": "Tensorflow - Used for DQN Model"}
+            ],
+            "thumbnail": "/ml/pong.png",
+            "description": [
+                "Trained a Reinforcement Learning Pong Agent to play against computer.", 
+                "DQN predicts the action. DQN is based on tensorflow keras. Environment is taken from built-in GYM environments"
+            ],
+            "gridSize": 1,
+            "youtubeLink": ""
+        }
+        
+    ]
+}
