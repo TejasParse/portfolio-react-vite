@@ -1,6 +1,7 @@
 import { useRef, useState, useEffect } from "react";
 import Navbar from "./Navbar/Navbar";
 import { Routes, Route, Link } from "react-router";
+import { ArrowDownTrayIcon, ArrowUpIcon } from "@heroicons/react/24/outline";
 import Education from "./Education/Education";
 import Skills from "./Skills/Skills";
 import Experience from "./Experience/Experience";
@@ -9,7 +10,10 @@ import AboutMe from "./AboutMe/AboutMe";
 import Resume from "./Resume/Resume";
 import Leadership from "./Leadership/Leadership";
 import SpeedCubing from "./SpeedCubing/SpeedCubing";
+import TopNavbar from "./TopNavbar/TopNavbar";
 import { useLocation } from "react-router";
+import FAB from "./Reusable/FAB";
+import BottomNavbar from "./BottomNavbar/BottomNavbar";
 
 const MainApp = (props) => {
   const location = useLocation();
@@ -40,6 +44,8 @@ const MainApp = (props) => {
 
   // scroll into section when clicking nav
   const scrollToSection = (section) => {
+    console.log(sectionRefs);
+
     sectionRefs[section].current?.scrollIntoView({ behavior: "smooth" });
     setNavOpen(false); // close mobile nav after clicking
   };
@@ -77,63 +83,105 @@ const MainApp = (props) => {
     };
   }, []);
 
+  console.log(sectionRefs);
+
   // console.log(activeSection, "Here is the path");
 
   return (
-    <div className="grid grid-cols-10">
-      <div className="hidden lg:block col-span-none lg:col-span-2 h-screen bg-brown-bg">
-        <Navbar activeSection={activeSection} scrollToSection={scrollToSection} />
-      </div>
-      <div className="lg:hidden col-span-10">
-        <div className="flex flex-row justify-between items-center p-3 bg-brown-bg">
-          <div className="fs-3 fw-semibold text-white">{location.pathname==="/" ? "/About Me" : location.pathname}/</div>
-          <div className="h-[40px] w-[40px]" onClick={() => setNavOpen(prev => !prev)}><img src="/hamburger.png" /></div>
+    <div>
+      <div className="bg-dark-primary-bg text-dark-primary-text">
+        <TopNavbar activeSection={activeSection} scrollToSection={scrollToSection} />
+        <div
+          id="content-container"
+        >
+          <section ref={aboutRef}>
+            <AboutMe />
+          </section>
+          <section ref={educationRef}>
+            <Education />
+          </section>
+          <section ref={experienceRef}>
+            <Experience />
+          </section>
+          <section ref={projectsRef}>
+            <Projects />
+          </section>
+          <section ref={skillsRef}>
+            <Skills />
+          </section>
+          <section ref={leadershipRef}>
+            <Leadership />
+          </section>
+          <section ref={speedCubingRef}>
+            <SpeedCubing />
+          </section>
+          <section ref={resumeRef}>
+            <Resume />
+          </section>
         </div>
-        {
-          navOpen && (
-            <>
-              <Link to={"/"}><div className="bg-gray-200 p-2">About Me</div></Link>
-              <Link to={"/Education"}><div className="bg-gray-100 p-2">Education</div></Link>
-              <Link to={"/Skills"}><div className="bg-gray-200 p-2">Skills</div></Link>
-              <Link to={"/Experience"}><div className="bg-gray-100 p-2">Experience</div></Link>
-              <Link to={"/Projects"}><div className="bg-gray-200 p-2">Projects</div></Link>
-              <Link to={"/Leadership"}><div className="bg-gray-100 p-2">Leadership</div></Link>
-              <Link to={"/SpeedCubing"}><div className="bg-gray-200 p-2">SpeedCubing</div></Link>
-              <Link to={"/Resume"}><div className="bg-gray-100 p-2">Resume</div></Link>
-            </>
-          )
-        }
+      </div>
+      <FAB className="p-1.5 lg:p-2 bottom-8 right-8" title="Download Resume">
+        <ArrowDownTrayIcon className="h-7 w-7 lg:h-8 lg:w-8" />
+      </FAB>
+      <FAB className="p-1.5 lg:p-2 bottom-24 right-8" title="Scroll to Top">
+        <ArrowUpIcon className="h-7 w-7 lg:h-8 lg:w-8" />
+      </FAB>
+      <BottomNavbar />
+      {/* <div className="grid grid-cols-10">
+        <div className="hidden lg:block col-span-none lg:col-span-2 h-screen bg-brown-bg">
+          <Navbar activeSection={activeSection} scrollToSection={scrollToSection} />
+        </div>
+        <div className="lg:hidden col-span-10">
+          <div className="flex flex-row justify-between items-center p-3 bg-brown-bg">
+            <div className="fs-3 fw-semibold text-white">{location.pathname === "/" ? "/About Me" : location.pathname}/</div>
+            <div className="h-[40px] w-[40px]" onClick={() => setNavOpen(prev => !prev)}><img src="/hamburger.png" /></div>
+          </div>
+          {
+            navOpen && (
+              <>
+                <Link to={"/"}><div className="bg-gray-200 p-2">About Me</div></Link>
+                <Link to={"/Education"}><div className="bg-gray-100 p-2">Education</div></Link>
+                <Link to={"/Skills"}><div className="bg-gray-200 p-2">Skills</div></Link>
+                <Link to={"/Experience"}><div className="bg-gray-100 p-2">Experience</div></Link>
+                <Link to={"/Projects"}><div className="bg-gray-200 p-2">Projects</div></Link>
+                <Link to={"/Leadership"}><div className="bg-gray-100 p-2">Leadership</div></Link>
+                <Link to={"/SpeedCubing"}><div className="bg-gray-200 p-2">SpeedCubing</div></Link>
+                <Link to={"/Resume"}><div className="bg-gray-100 p-2">Resume</div></Link>
+              </>
+            )
+          }
 
-      </div>
-      <div
-        className="col-span-10 lg:col-span-8 sm:px-3 lg:px-9 lg:h-screen overflow-y-scroll"
-        id="content-container"
-      >
-        <section ref={aboutRef}>
-          <AboutMe />
-        </section>
-        <section ref={educationRef}>
-          <Education />
-        </section>
-        <section ref={experienceRef}>
-          <Experience />
-        </section>
-        <section ref={projectsRef}>
-          <Projects />
-        </section>
-        <section ref={skillsRef}>
-          <Skills />
-        </section>
-        <section ref={leadershipRef}>
-          <Leadership />
-        </section>
-        <section ref={speedCubingRef}>
-          <SpeedCubing />
-        </section>
-        <section ref={resumeRef}>
-          <Resume />
-        </section>
-      </div>
+        </div>
+        <div
+          className="col-span-10 lg:col-span-8 sm:px-3 lg:px-9 lg:h-screen overflow-y-scroll"
+          id="content-container"
+        >
+          <section ref={aboutRef}>
+            <AboutMe />
+          </section>
+          <section ref={educationRef}>
+            <Education />
+          </section>
+          <section ref={experienceRef}>
+            <Experience />
+          </section>
+          <section ref={projectsRef}>
+            <Projects />
+          </section>
+          <section ref={skillsRef}>
+            <Skills />
+          </section>
+          <section ref={leadershipRef}>
+            <Leadership />
+          </section>
+          <section ref={speedCubingRef}>
+            <SpeedCubing />
+          </section>
+          <section ref={resumeRef}>
+            <Resume />
+          </section>
+        </div>
+      </div> */}
     </div>
   );
 
