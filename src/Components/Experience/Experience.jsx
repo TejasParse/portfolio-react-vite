@@ -2,16 +2,11 @@ import React from 'react';
 import Typewriter from 'typewriter-effect';
 import { motion } from "motion/react"
 
-import settyl from "./icons/settyl.jpg";
-import appscms from "./icons/appscms.png";
-import datstek from "./icons/datstek.webp";
-import psych from "./icons/psych.webp";
-import walnuted from "./icons/walnuted.png";
 import CompanyCard from './components/CompanyCard';
 
 const Experience = () => {
   return (
-    <div className="flex flex-col justify-center py-3 md:px-24 md:py-0 mt-[200px]">
+    <div className="flex flex-col justify-center py-3 md:px-24 md:py-0 mt-[200px] mb-48">
       <motion.div
         className="text-4xl font-bold mb-4 orbitron-font-style pb-3 border-b-2 border-white"
         initial={{ opacity: 0, y: 100 }}
@@ -70,7 +65,7 @@ const Experience = () => {
           gradientType="appscms"
         />
       </motion.div>
-      <div className='hidden'>
+      {/* <div className='hidden'>
         <div className="border-x-4 border-x-brown-bg border-b-4 border-b-brown-bg px-2 mb-6">
           <div className="md:flex flex-row justify-between border-b-2 text-light-brown-bg pb-2">
             <div className="flex flex-row justify-start gap-2 items-center">
@@ -230,7 +225,7 @@ const Experience = () => {
             </ul>
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }

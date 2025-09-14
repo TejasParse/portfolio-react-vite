@@ -10,7 +10,7 @@ const Education = () => {
 
   return (
     <div
-      className="py-3 md:px-24 md:mb-48 flex flex-col justify-center overflow-hidden"
+      className="py-3 md:px-24 md:mb-72 flex flex-col justify-center overflow-hidden"
     >
       <motion.div
         className="text-4xl font-bold mb-4 orbitron-font-style border-b-2 border-white pb-3"
