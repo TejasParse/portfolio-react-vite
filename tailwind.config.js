@@ -15,6 +15,8 @@ module.exports = {
         "dark-primary-bg": "#171c28",
         "dark-primary-text": "#ffffff",
         "dark-primary-hover": "#5D3FD3",
+        "walnuted-bg-from": "#54b948",
+        "walnuted-bg-to": "#000000",
       },
     },
   },

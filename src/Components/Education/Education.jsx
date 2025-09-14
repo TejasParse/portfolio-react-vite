@@ -1,4 +1,6 @@
 import React from 'react';
+import Typewriter from 'typewriter-effect';
+import { motion } from "motion/react"
 
 import iiits from "./icons/iiits.png"
 import asu from "./icons/asu.webp"
@@ -7,9 +9,31 @@ import asu_removed from "./icons/asu_removed.png"
 const Education = () => {
 
   return (
-    <div className="h-screen py-3 md:px-24 md:py-0 flex flex-col justify-center">
-      <div className="text-4xl font-bold mb-4">Education</div>
-      <div className="border-y-2 border-white py-3 flex flex-row justify-start gap-5">
+    <div
+      className="py-3 md:px-24 md:mb-48 flex flex-col justify-center overflow-hidden"
+    >
+      <motion.div
+        className="text-4xl font-bold mb-4 orbitron-font-style border-b-2 border-white pb-3"
+        initial={{ opacity: 0, y: 100 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        viewport={{ once: false, amount: 0.5 }}
+      >
+        <Typewriter
+          options={{
+            strings: ['Education'],
+            autoStart: true,
+            loop: true
+          }}
+        />
+      </motion.div>
+      <motion.div
+        className="border-b-2 border-white pb-3 flex flex-row justify-start gap-5"
+        initial={{ opacity: 0, y: 100, x: 400 }}
+        whileInView={{ opacity: 1, y: 0, x: 0 }}
+        transition={{ duration: 0.5 }}
+        viewport={{ once: false, amount: 0.1 }}
+      >
         <div>
           <img className="w-[30px] md:w-[200px]" src={asu_removed} alt="Settyl" />
         </div>
@@ -37,8 +61,14 @@ const Education = () => {
             Awarded the New American University Merit Scholarship of $9000 for outstanding academic performance.  
           </div>
         </div>
-      </div>
-      <div className="border-b-2 border-white py-3 flex flex-row justify-start gap-5">
+      </motion.div>
+      <motion.div
+        className="border-b-2 border-white py-3 flex flex-row justify-start gap-5"
+        initial={{ opacity: 0, y: 100, x: -400 }}
+        whileInView={{ opacity: 1, y: 0, x: 0 }}
+        transition={{ duration: 0.5 }}
+        viewport={{ once: false, amount: 0.1 }}
+      >
         <div>
           <img className="w-[30px] md:w-[200px]" src={iiits} alt="Settyl" />
         </div>
@@ -66,7 +96,7 @@ const Education = () => {
             Coursework: Machine Learning, Deep Learning, Data Structures and Algorithms, OOP, DBMS, Artificial Intelligence, COS, CCN, Full Stack Development, Information Retrieval, Computer Vision
           </div>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }

@@ -1,18 +1,76 @@
 import React from 'react';
+import Typewriter from 'typewriter-effect';
+import { motion } from "motion/react"
 
 import settyl from "./icons/settyl.jpg";
 import appscms from "./icons/appscms.png";
 import datstek from "./icons/datstek.webp";
 import psych from "./icons/psych.webp";
 import walnuted from "./icons/walnuted.png";
+import CompanyCard from './components/CompanyCard';
 
 const Experience = () => {
   return (
-    <div className="lg:h-screen flex flex-col justify-center px-3 py-3 md:px-0 md:py-0">
-      <div className="border-x-4 border-x-brown-bg border-b-4 border-b-brown-bg px-2 pb-3 mb-6">
-        <h1 className="text-xl md:text-3xl font-bold text-light-brown-bg">Experience</h1>
-      </div>
-      <div className=''>
+    <div className="flex flex-col justify-center py-3 md:px-24 md:py-0 mt-[200px]">
+      <motion.div
+        className="text-4xl font-bold mb-4 orbitron-font-style pb-3 border-b-2 border-white"
+        initial={{ opacity: 0, y: 100 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        viewport={{ once: false, amount: 0.5 }}
+      >
+        <Typewriter
+          options={{
+            strings: ['Professional Experience'],
+            autoStart: true,
+            loop: true
+          }}
+        />
+      </motion.div>
+      <motion.div
+        className='grid grid-cols-3 gap-4'
+        initial={{ opacity: 0, y: -300 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        viewport={{ once: false, amount: 1 }}
+      >
+        <CompanyCard
+          companyName="Psych For Life"
+          companyImageUrl={"/company/psych.webp"} 
+          companyTitle="Software Developer"
+          companyDuration="Dec 2024 - Present"
+          gradientType="psych"
+        />
+        <CompanyCard
+          companyName="WalnutedAI"
+          companyImageUrl={"/company/walnuted.png"} 
+          companyTitle="Software Developer Intern"
+          companyDuration="June 2025 - August 2025"
+          gradientType="walnuted"
+        />
+        <CompanyCard
+          companyName="DatStek"
+          companyImageUrl={"/company/datstek.webp"} 
+          companyTitle="Full Stack Developer Intern"
+          companyDuration="Jan 2024 - June 2024"
+          gradientType="datstek"
+        />
+        <CompanyCard
+          companyName="Settyl Tech Private Ltd"
+          companyImageUrl={"/company/settyl.jpg"} 
+          companyTitle="Full Stack Developer Intern"
+          companyDuration="May 2023 - Sept 2023"
+          gradientType="settyl"
+        />
+        <CompanyCard
+          companyName="Appscms Technologies"
+          companyImageUrl={"/company/appscms.png"} 
+          companyTitle="Software Development Intern"
+          companyDuration="July 2022 - Nov 2022"
+          gradientType="appscms"
+        />
+      </motion.div>
+      <div className='hidden'>
         <div className="border-x-4 border-x-brown-bg border-b-4 border-b-brown-bg px-2 mb-6">
           <div className="md:flex flex-row justify-between border-b-2 text-light-brown-bg pb-2">
             <div className="flex flex-row justify-start gap-2 items-center">
