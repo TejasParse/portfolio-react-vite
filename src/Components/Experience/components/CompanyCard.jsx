@@ -17,6 +17,7 @@ const CompanyCard = ({
       'settyl': 'bg-gradient-to-b from-purple-700 to-purple-500',
       'datstek': 'bg-gradient-to-b from-blue-700 to-blue-500',
       'appscms': 'bg-gradient-to-b from-indigo-700 to-indigo-500',
+      'master': 'bg-gradient-to-b from-sky-700 to-sky-500',
     };
     
     const key = `${type}`;

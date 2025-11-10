@@ -12,6 +12,7 @@
   "dependencies": {
     "@heroicons/react": "^2.2.0",
     "@react-pdf-viewer/core": "^3.12.0",
+    "@xyflow/react": "^12.8.6",
     "bootstrap": "^5.3.8",
     "motion": "^12.23.12",
     "pdfjs-dist": "^3.4.120",

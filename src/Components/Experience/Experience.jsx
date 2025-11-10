@@ -6,7 +6,7 @@ import CompanyCard from './components/CompanyCard';
 
 const Experience = () => {
   return (
-    <div className="flex flex-col justify-center py-3 md:px-24 md:py-0 mt-[200px] mb-48">
+    <div className="flex flex-col justify-center py-3 md:px-24 my-96">
       <motion.div
         className="text-4xl font-bold mb-4 orbitron-font-style pb-3 border-b-2 border-white"
         initial={{ opacity: 0, y: 100 }}
@@ -29,6 +29,13 @@ const Experience = () => {
         transition={{ duration: 0.5 }}
         viewport={{ once: false, amount: 1 }}
       >
+        <CompanyCard
+          companyName="Master Electronics"
+          companyImageUrl={"/company/master.jpg"} 
+          companyTitle="Software Engineer Intern"
+          companyDuration="Sept 2025 - Present"
+          gradientType="master"
+        />
         <CompanyCard
           companyName="Psych For Life"
           companyImageUrl={"/company/psych.webp"} 

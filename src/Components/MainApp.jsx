@@ -50,6 +50,11 @@ const MainApp = (props) => {
     setNavOpen(false); // close mobile nav after clicking
   };
 
+  // scroll to top of document
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   useEffect(() => {
     const contentContainer = document.querySelector('#content-container');
     const handleScroll = (e) => {
@@ -123,7 +128,7 @@ const MainApp = (props) => {
       <FAB className="p-1.5 lg:p-2 bottom-8 right-8" title="Download Resume">
         <ArrowDownTrayIcon className="h-7 w-7 lg:h-8 lg:w-8" />
       </FAB>
-      <FAB className="p-1.5 lg:p-2 bottom-24 right-8" title="Scroll to Top">
+      <FAB className="p-1.5 lg:p-2 bottom-24 right-8" title="Scroll to Top" onClick={scrollToTop}>
         <ArrowUpIcon className="h-7 w-7 lg:h-8 lg:w-8" />
       </FAB>
       <BottomNavbar />
