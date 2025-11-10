@@ -1,18 +1,36 @@
-import React from 'react'
+import React from 'react';
+import Typewriter from 'typewriter-effect';
+import { motion } from "motion/react"
 
 import iiits from "./icons/iiits.png"
 import iota from "./icons/iota.png"
 
 const Leadership = () => {
   return (
-    <div className="lg:h-screen flex flex-col justify-center md:p-0 p-3">
-      <div className="border-x-4 border-x-brown-bg border-b-4 border-b-brown-bg px-2 pb-3 mb-6">
-        <h1 className="text-xl md:text-3xl font-bold text-light-brown-bg">
-          Positions Of Responsibility
-        </h1>
-      </div>
-      <div className="border-x-4 border-x-brown-bg border-b-4 border-b-brown-bg px-2 mb-6">
-        <div className="md:flex flex-row justify-between border-b-2 text-light-brown-bg pb-2">
+    <div className="flex flex-col justify-center py-3 md:px-24 my-96">
+      <motion.div
+        className="text-4xl font-bold mb-4 orbitron-font-style pb-3 border-b-2 border-white"
+        initial={{ opacity: 0, y: 100 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        viewport={{ once: false, amount: 0.5 }}
+      >
+        <Typewriter
+          options={{
+            strings: ['Positions Of Responsibility'],
+            autoStart: true,
+            loop: true
+          }}
+        />
+      </motion.div>
+      <motion.div
+        className="border-b-2 border-white px-2 mb-6"
+        initial={{ opacity: 0, y: 100, x: 400 }}
+        whileInView={{ opacity: 1, y: 0, x: 0 }}
+        transition={{ duration: 0.5 }}
+        viewport={{ once: false, amount: 0.1 }}
+      >
+        <div className="md:flex flex-row justify-between pb-2">
           <div className="flex flex-row items-center justify-start gap-2">
             <img
               className="w-[30px] h-[30px]"
@@ -23,7 +41,7 @@ const Leadership = () => {
               Mess (Dining) Secretary @ Student Life Council, IIIT Sri City
             </div>
           </div>
-          <div className="md:text-xl text-black font-semibold">
+          <div className="md:text-xl font-semibold">
             Sept 2022 - May 2023
           </div>
         </div>
@@ -41,10 +59,16 @@ const Leadership = () => {
             </li>
           </ul>
         </div>
-      </div>
+      </motion.div>
 
-      <div className="border-x-4 border-x-brown-bg border-b-4 border-b-brown-bg px-2">
-        <div className="md:flex flex-row justify-between border-b-2 text-light-brown-bg pb-2">
+      <motion.div
+        className="border-b-2 border-white px-2"
+        initial={{ opacity: 0, y: 100, x: -400 }}
+        whileInView={{ opacity: 1, y: 0, x: 0 }}
+        transition={{ duration: 0.5 }}
+        viewport={{ once: false, amount: 0.1 }}
+      >
+        <div className="md:flex flex-row justify-between pb-2">
           <div className="flex flex-row justify-start items-center gap-2">
             <img
               className="w-[30px] h-[30px]"
@@ -55,7 +79,7 @@ const Leadership = () => {
               Head, Core @ IOTA, Projects Club of IIIT Sri City
             </div>
           </div>
-          <div className="md:text-xl text-black font-semibold">
+          <div className="md:text-xl font-semibold">
             Sept 2021 - May 2023
           </div>
         </div>
@@ -76,7 +100,7 @@ const Leadership = () => {
             </li>
           </ul>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }

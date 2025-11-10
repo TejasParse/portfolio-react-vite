@@ -25,6 +25,16 @@ import typescript from "./icons/typescript.png"
 import postgres from "./icons/postgre.png"
 import aws from "./icons/aws.webp"
 import numpy from "./icons/numpy.webp"
+import html from "./icons/html_icon.png"
+import css from "./icons/css_icon.png"
+import go from "./icons/go.png"
+import nextjs from "./icons/next.png"
+import elasticsearch from "./icons/elasticsearch.png"
+import sqlite from "./icons/sqlite.png"
+import docker from "./icons/docker.png"
+import git from "./icons/git_icon.png"
+import kafka from "./icons/kafka.png"
+import redis from "./icons/redis.png"
 
 // Skill data structure
 const skillsData = {
@@ -39,9 +49,9 @@ const skillsData = {
         { name: 'Python', icon: python, level: 90 },
         { name: 'JavaScript', icon: javascript, level: 95 },
         { name: 'TypeScript', icon: typescript, level: 90 },
-        { name: 'Go', icon: javascript, level: 75 },
-        { name: 'HTML', icon: javascript, level: 95 },
-        { name: 'CSS', icon: tailwind, level: 95 },
+        { name: 'Go', icon: go, level: 75 },
+        { name: 'HTML', icon: html, level: 95 },
+        { name: 'CSS', icon: css, level: 95 },
         { name: 'C/C++', icon: cpp, level: 80 },
         { name: 'Kotlin', icon: java, level: 75 },
       ]
@@ -54,7 +64,7 @@ const skillsData = {
       color: 'from-green-500 to-teal-600',
       skills: [
         { name: 'React', icon: react, level: 95 },
-        { name: 'Next.js', icon: react, level: 90 },
+        { name: 'Next.js', icon: nextjs, level: 90 },
         { name: 'Tailwind', icon: tailwind, level: 90 },
         { name: 'Bootstrap', icon: bootstrap, level: 85 },
         { name: 'Node.js', icon: node, level: 90 },
@@ -74,10 +84,10 @@ const skillsData = {
         { name: 'PostgreSQL', icon: postgres, level: 90 },
         { name: 'MongoDB', icon: mongodb, level: 90 },
         { name: 'MySQL', icon: mysql, level: 85 },
-        { name: 'Redis', icon: postgres, level: 80 },
-        { name: 'SQLite', icon: mysql, level: 85 },
+        { name: 'Redis', icon: redis, level: 80 },
+        { name: 'SQLite', icon: sqlite, level: 85 },
         { name: 'DynamoDB', icon: aws, level: 75 },
-        { name: 'Elasticsearch', icon: mongodb, level: 75 },
+        { name: 'Elasticsearch', icon: elasticsearch, level: 75 },
       ]
     },
     {
@@ -91,7 +101,7 @@ const skillsData = {
         { name: 'NumPy', icon: numpy, level: 90 },
         { name: 'Scikit-learn', icon: scikit, level: 85 },
         { name: 'PyTorch', icon: pytorch, level: 85 },
-        { name: 'Apache Kafka', icon: python, level: 75 },
+        { name: 'Apache Kafka', icon: kafka, level: 75 },
       ]
     },
     {
@@ -101,8 +111,8 @@ const skillsData = {
       y: 45,
       color: 'from-cyan-500 to-blue-600',
       skills: [
-        { name: 'Docker', icon: azure, level: 85 },
-        { name: 'Git', icon: github, level: 95 },
+        { name: 'Docker', icon: docker, level: 85 },
+        { name: 'Git', icon: git, level: 95 },
         { name: 'GitHub', icon: github, level: 95 },
         { name: 'GitHub Actions', icon: github, level: 85 },
         { name: 'AWS', icon: aws, level: 90 },
@@ -366,7 +376,7 @@ const Skills = () => {
       >
         <Typewriter
           options={{
-            strings: ['Skills & Achievements'],
+            strings: ['Skills'],
             autoStart: true,
             loop: true
           }}
